@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Livros{% endblock %}
+
+{% block content %}
+<h1>Adicionar Livros</h1>
+<form method="POST">
+    <div class="form-group">
+        <label for="titulo">Título:</label>
+        <input type="text" class="form-control" id="titulo" name="titulo">
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+</form>
+
+<h2>Lista de Livros</h2>
+<ul class="list-group">
+    {% for livro in livros %}
+        <li class="list-group-item">{{ livro }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
